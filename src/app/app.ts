@@ -1,14 +1,25 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
+interface Repository {
+  name: string;
+  description: string;
+  stargazers_count: number;
+  open_issues_count: number;
+  owner: {
+    login: string;
+    avatar_url: string;
+  };
+}
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
-  myData: any[] = [];
+  myData: Repository[] = [];
 
   constructor() {
     this.log();
@@ -20,7 +31,7 @@ export class App {
       .then((data) => {
         console.log(data.items);
         this.myData = data.items;
-        console.log(this.myData[0].name);
+        console.log(this.myData[0]);
       })
       .catch((error) => console.error(error));
   }

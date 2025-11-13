@@ -1,7 +1,7 @@
 <main class="main">
-  <div>
-    hiii {{myData[0].name}}
-  </div>
+  @if(myData.length > 0) {
+    <div>
+      {{ myData[0].name }}
+    </div>
+  }
 </main>
-
-<router-outlet />
