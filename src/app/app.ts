@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface Repository {
@@ -21,11 +21,11 @@ interface Repository {
 export class App {
   myData: Repository[] = [];
 
-  constructor() {
-    this.log();
+  ngOnInit() {
+    this.fetchRepositories();
   }
 
-  log() {
+  fetchRepositories() {
     fetch('https://api.github.com/search/repositories?q=created:>2025-10-13&sort=stars&order=desc')
       .then((response) => response.json())
       .then((data) => {
