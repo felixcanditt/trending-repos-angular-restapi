@@ -33,12 +33,12 @@ export class App {
       .then((response) => response.json())
       .then((data) => {
         this.repositories.push(...data.items);
-        this.apiPage++;
       })
       .catch((error) => console.error(error));
   }
 
   showMoreRepositories() {
+    this.apiPage++;
     this.fetchRepositories();
   }
 }
