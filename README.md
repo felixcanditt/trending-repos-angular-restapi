@@ -1,6 +1,5 @@
 # GitHub Repositories List
 
-## Overview
 Angular app that lists the most starred Github repositories created in the last 30 days. Infinite scroll loads more repositories as you scroll down. I implemented this app as part of a coding challenge.
 
 ## Tech
