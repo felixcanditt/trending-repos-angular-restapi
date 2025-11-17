@@ -6,7 +6,15 @@
   box-sizing: border-box;
 }
 
+main {
+  margin: 1.25rem;
+}
+
 h1 {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   text-align: center;
+}
+
+ol {
+  list-style: none;
 }
