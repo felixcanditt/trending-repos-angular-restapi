@@ -1,15 +1,36 @@
 <main class="main">
   @if (repositories.length > 0) {
     <ul>
-      @for (repository of repositories; track repository.name) {
+      @for (repository of repositories; track $index) {
         <li>
-          {{ repository.name }}, {{ repository.description }}, {{ repository.stargazers_count }},
-          {{ repository.open_issues_count }}, {{ repository.owner.login }},
-          {{ repository.owner.avatar_url }}
+          <div>
+            {{ repository.name }}, {{ repository.description }}, {{ repository.stargazers_count }},
+            {{ repository.open_issues_count }}, {{ repository.owner.login }},
+            {{ repository.owner.avatar_url }}
+          </div>
+          @if ($index === repositories.length - 1) {
+            <button (click)="showMore()">more</button>
+          }
         </li>
       } @empty {
         <li>There are no repositories.</li>
       }
     </ul>
   }
+
+  <ul>
+    @for (item of newArray; track $index) {
+      <li>
+        <div>
+          {{ item }}
+        </div>
+
+        @if ($index === newArray.length - 1) {
+          <button (click)="showMore()">more</button>
+        }
+      </li>
+    } @empty {
+      <li>There are no repositories.</li>
+    }
+  </ul>
 </main>

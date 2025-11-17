@@ -20,6 +20,7 @@ interface Repository {
 })
 export class App {
   repositories: Repository[] = [];
+  newArray = [1, 2, 3];
 
   ngOnInit() {
     this.fetchRepositories();
@@ -32,5 +33,10 @@ export class App {
         this.repositories = data.items;
       })
       .catch((error) => console.error(error));
+  }
+
+  showMore() {
+    console.log(1);
+    this.newArray.push(4, 5, 6);
   }
 }
