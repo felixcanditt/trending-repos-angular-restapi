@@ -1,0 +1,26 @@
+li {
+  margin-bottom: 2rem;
+  margin-left: 0.75rem;
+  display: flex;
+  gap: 1rem;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.badge {
+  border: 1px black solid;
+  padding: 0.25rem;
+}
+
+.details-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

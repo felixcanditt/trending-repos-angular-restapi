@@ -1,36 +1,20 @@
 <main class="main">
   <h1>Trending Repos</h1>
-  <app-repository></app-repository>
+
   @if (repositories.length > 0) {
     <ol>
       @for (repository of repositories; track $index) {
-        <li>
-          <img [src]="repository.owner.avatar_url" [alt]="repository.owner.login" class="avatar" />
-          <div>
-            <h2>
-              {{ repository.name }}
-            </h2>
-            <p>
-              {{ repository.description }}
-            </p>
-            <div class="details-box">
-              <span class="badge">Stars: {{ repository.stargazers_count }}</span>
-              <span class="badge">Issues: {{ repository.open_issues_count }}</span>
-              <span>
-                created {{ daysAgo(repository.created_at) }} day(s) ago by
-                {{ repository.owner.login }}
-              </span>
-            </div>
-          </div>
-        </li>
+        <app-repository [repository]="repository"></app-repository>
       } @empty {
         <li>There are no repositories.</li>
       }
     </ol>
   }
+
   @if (isLoading) {
     <p>Loading...</p>
   }
+
   @if (!hasMore) {
     <p>No more repositories.</p>
   }
