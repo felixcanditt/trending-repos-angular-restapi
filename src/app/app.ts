@@ -38,7 +38,8 @@ export class App {
     const windowHeight = window.innerHeight;
 
     if (rect.top < windowHeight) {
-      console.log(1);
+      this.apiPage++;
+      this.fetchRepositories();
     }
   }
 
