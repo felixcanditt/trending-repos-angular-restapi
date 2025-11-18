@@ -1,19 +1,21 @@
-<li>
-  <img [src]="repository.owner.avatar_url" [alt]="repository.owner.login" class="avatar" />
-  <div>
-    <h2>
-      {{ repository.name }}
-    </h2>
-    <p>
-      {{ repository.description }}
-    </p>
-    <div class="details-box">
-      <span class="badge">Stars: {{ repository.stargazers_count }}</span>
-      <span class="badge">Issues: {{ repository.open_issues_count }}</span>
-      <span>
-        created {{ daysAgo(repository.created_at) }} day(s) ago by
-        {{ repository.owner.login }}
-      </span>
+@if (repository) {
+  <li>
+    <img [src]="repository.owner.avatar_url" [alt]="repository.owner.login" class="avatar" />
+    <div>
+      <h2>
+        {{ repository.name }}
+      </h2>
+      <p>
+        {{ repository.description }}
+      </p>
+      <div class="details-box">
+        <span class="badge">Stars: {{ repository.stargazers_count }}</span>
+        <span class="badge">Issues: {{ repository.open_issues_count }}</span>
+        <span>
+          created {{ daysAgo(repository.created_at) }} day(s) ago by
+          {{ repository.owner.login }}
+        </span>
+      </div>
     </div>
-  </div>
-</li>
+  </li>
+}

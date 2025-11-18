@@ -1,4 +1,4 @@
-@if (repositories.length > 0) {
+@if (repositories && repositories.length > 0) {
   <ol>
     @for (repository of repositories; track $index) {
       <app-repository [repository]="repository"></app-repository>
