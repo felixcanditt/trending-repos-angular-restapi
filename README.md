@@ -14,7 +14,17 @@ Angular app that lists the most starred GitHub repositories created in the last 
 - Run `npm install` and `ng serve`
 - Open http://localhost:4200 in your browser
 
-## First test run
+## Running tests
+
+The Angular app uses Jasmine for unit testing and Karma as the test runner. Tests are defined in .spec.ts files next to each component. To run the tests, execute `npm install` and then `ng test`.
+
+### My test runs
+
+- **First run:** without mock data, some tests failed due to `undefined` values
+- **Last run:** with mock input data for components, all tests pass
+- Including mock data ensures that components render correctly with representative input
+
+### My first test run (without mock data)
 
 ```
 App
@@ -38,7 +48,7 @@ TypeError: Cannot read properties of undefined (reading 'owner')
     at RepositoryComponent2_Template (ng:///RepositoryComponent2.js:28:50)
                                                                                                                                                                                                                                         
 ```
-## Last test run
+### My last test run (with mock data)
 
 ```
 RepositoriesList
