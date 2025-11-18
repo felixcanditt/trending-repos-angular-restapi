@@ -23,8 +23,8 @@ The app uses Jasmine for unit testing and Karma as the test runner. Tests are de
 
 - **First run:** without mock data, some tests failed due to `undefined` values
 - **Last run:** with mock input data for components, all tests pass
-- Including mock data ensures that components render correctly with representative input
-
+- Including mock data ensures that components render correctly and behave as expected
+  
 ### My first test run (without mock data)
 
 ```
