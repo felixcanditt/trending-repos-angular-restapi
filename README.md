@@ -38,9 +38,16 @@ TypeError: Cannot read properties of undefined (reading 'owner')
     at RepositoryComponent2_Template (ng:///RepositoryComponent2.js:28:50)
                                                                                                                                                                                                                                         
 ```
+## Last test run
 
 ```
-xxx
+RepositoriesList
+✔ should create
+Repository
+✔ should create
+App
+✔ should create the app
+✔ should render title
 ```
 
 
